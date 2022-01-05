@@ -1,14 +1,15 @@
 version: '3.8'
 
 services:
-  build: .
-  container_name: apicinema-api
-  ports:
-    - 80:80
-  networks:
-    - net-apicinema
-  depends_on:
-    - apicinema-db
+  app:
+    build: .
+    container_name: apicinema-api
+    ports:
+      - 80:80
+    networks:
+      - net-apicinema
+    depends_on:
+      - apicinema-db
 
   apicinema-db:
     image: mongo
