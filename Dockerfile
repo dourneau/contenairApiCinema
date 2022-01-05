@@ -12,6 +12,6 @@ WORKDIR /app
 
 COPY --from="BUILD" /app/target/ApiCinema-0.0.1-SNAPSHOT.jar ./app.jar
 
-EXPOSE 8090
+EXPOSE 80
 
 CMD ["java","-jar","app.jar"]
